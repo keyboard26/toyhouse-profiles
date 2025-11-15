@@ -1,0 +1,1496 @@
+﻿
+
+<!--
+    ===============================
+
+            Hollow Knight
+        
+    ===============================
+
+    Things this code has:
+        - Basics
+        - Inventory
+        - Design Notes
+        - Relationships
+        - History
+
+
+    This is also the first code that I have fully made myself
+    so it may be weird idk
+    
+    If you get confused feel free to ask me about something
+    
+    
+    Also, if you use this, show me!!! I wanna seee!!!
+-->
+
+
+
+<div class="container" style="position: relative; border-radius: 20px; overflow: hidden; max-width:1180px; color: #fff;">
+    <div>
+        
+<!-- 
+=================================
+    
+        BACKGROUND IMAGE
+    
+=================================
+-->
+        <img src="
+        
+        https://f2.toyhou.se/file/f2-toyhou-se/images/101170370_zhaG3ckyCa3lSGx.png
+        
+        
+        " style="position: absolute; inset: 0; width: 100%; min-height: 100%; object-fit: cover;">
+        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106157954_T4g95NLH25LElJf.png" style="position: absolute; inset: 0; width: 100%; min-height: 100%; object-fit: cover;">
+    </div>
+
+
+<div class="container position-relative" style="font-family: serif;  padding:50px; max-width:1152px; border-radius: 20px;">
+<!-- BORDER DECORATION -->
+    <!-- Top Corners -->
+    <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158017_ZZtOtGbRd4jwopY.png" style="position:absolute; top:20px; left:20px; width:125px;z-index:10;" class="hidden-md-down">
+    <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158078_t4wuJVg5h1D7sQs.png" style="position:absolute; top:20px; right:20px; width:125px;z-index:10;" class="hidden-md-down">
+    <!-- Bottom Corners -->
+    <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158078_t4wuJVg5h1D7sQs.png" style="position:absolute; bottom:20px; left:20px; width:125px;z-index:10; transform: rotate(180deg)" class="hidden-md-down">
+    <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158017_ZZtOtGbRd4jwopY.png" style="position:absolute; bottom:20px; right:20px; width:125px;z-index:10; transform: rotate(180deg)" class="hidden-md-down">
+
+    <!-- Top and Bottom - Large Screens -->
+    <div class="hidden-md-down">
+        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158170_M23xJ4QrKq8D4AD.png" style="position:absolute; top:40px; left:50%; transform:translateX(-50%); width:600px;">
+        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158195_gxFvQO16RDLEaAT.png" style="position:absolute; bottom:20px; left:50%; transform:translateX(-50%); width:450px;">
+    </div>
+    
+    <!-- Top and Bottom - Small Screens -->
+    <div class="d-lg-none">
+        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158170_M23xJ4QrKq8D4AD.png" style="position:absolute; top:35px; left:50%; transform:translateX(-50%); width:300px;" class="mt-2">
+        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158195_gxFvQO16RDLEaAT.png" style="position:absolute; bottom:20px; left:50%; transform:translateX(-50%); width:300px;">
+    </div>
+    <!--END BORDER DECORATION -->
+
+
+    <!-- ARROWS -->
+    <a class="p-1" href="#HKcarousel" role="button" data-slide="prev">
+        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158233_Qvt3HKsy3LJOYv8.png" style="position:absolute; top:50%; left:10px; width:30px;z-index:10;">
+    </a>
+    <a class="p-1" href="#HKcarousel" role="button" data-slide="next">
+        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158233_Qvt3HKsy3LJOYv8.png" style="position:absolute; top:50%; right:10px; width:30px;z-index:10; transform: rotate(180deg);">
+    </a>
+    <!-- END ARROWS -->
+    
+<!-- CAROUSEL -->
+    <div id="HKcarousel" class="carousel slide carousel-fade" data-interval="false" data-bs-interval="false" data-pause="true"><div class="carousel-inner" style="overflow: visible"> 
+    
+
+
+    
+
+<!-- 
+=================================
+    
+           BASICS PAGE
+    
+=================================
+-->
+        <div class="carousel-item active">
+        <div class="row no-gutters align-items-start justify-content-center p-3" style="min-height: 600px;">
+            
+            <!-- TITLE -->
+            <div class="text-uppercase" style="position: absolute; top: -70px; left: 50%; transform: translateX(-50%); z-index: 9999; padding: 5px 20px; font-family: 'Goudy Old Style'; font-size: 2em; letter-spacing: 3px;">
+                      Basics
+            </div>
+            
+            
+            
+       <!-- NAME BANNER -->
+        <div class="container my-3 mx-md-5 mt-lg-5" style=" border-radius: 25px;  min-width: 300px">
+            <!-- Corner Thing - Large Screens-->
+            <div class="hidden-md-down" style="background-image:url(https://f2.toyhou.se/file/f2-toyhou-se/images/106158302_lOQNWK2i4Eyz2Io.png); background-repeat: no-repeat; background-size: 800px; position: absolute; z-index: 2; width:100%; height: 300px; top: -10px; left:3px; filter: drop-shadow(2px 3px 5px #000);"></div>
+            <!-- Corner Thing - For Medium Screens-->
+            <div class="d-none d-md-block d-lg-none" style="background-image:url(https://f2.toyhou.se/file/f2-toyhou-se/images/106158335_xlLBZ1HrVIvGc6E.png); background-repeat: no-repeat; background-size: 300px; position: absolute; z-index: 2; width:100%; height: 150px; top: -9px; left: 5px; filter: drop-shadow(2px 3px 5px #000);"></div>
+            <!-- Corner Thing - For Small Screens-->
+            <div class="d-block d-md-none" style="background-image:url(https://f2.toyhou.se/file/f2-toyhou-se/images/106158335_xlLBZ1HrVIvGc6E.png); background-repeat: no-repeat; background-size: 225px; position: absolute; z-index: 2; width:100%; height: 150px; top: -6px;left: 8px; filter: drop-shadow(2px 3px 3px #000);"></div>
+    
+        <!-- =================================
+                    BANNER IMAGE
+            
+            I used the save/load art from
+            the game for this
+                
+        ================================-->
+            <div style="background-image:url(
+          
+            https://f2.toyhou.se/file/f2-toyhou-se/images/106158418_tXwIbCZ1v2mZdyV.png
+          
+                ); background-size: cover; background-position: top; border-radius: 25px; position: relative; z-index: 1;" class="p-3">
+
+            <!-- PROFILE IMAGE & NAME -->
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-start mt-4 ml-md-n4" style="position: relative; z-index: 2; gap: 1rem; ;">
+                <div class="mr-n5 ml-md-5" style="position: relative; width: 150px; min-height: 100px;">
+                    <!-- Image Decoration -->
+                    <div style="background-image:url(https://f2.toyhou.se/file/f2-toyhou-se/images/106158459_NB9KzBlN8wCcdub.png); background-repeat: no-repeat; background-size: contain; position: absolute; z-index: 0;width: 300px; height: 124px; top: -28px; left: -10px; filter: drop-shadow(2px 2px 10px #000);"></div>
+                    <div style="position: relative; z-index: 1;">
+                        
+            <!-- =================================
+                  PROFILE IMAGE / ICON
+            =================================-->
+                        <img src="
+                        
+                https://s.yimg.com/ny/api/res/1.2/4RKoy4AmRtSfYmmHGdegFw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02OTk-/https://media.zenfs.com/en/pc_gamer_708/0fd79138210dee99f038cef33c65b87d
+                        
+                        " style="user-select: none; width: 91px; height: 91px; border-radius: 50%; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="text-center text-md-left" style="filter: drop-shadow(0px 5px 15px #000);">
+    
+            <!-- =================================
+                           NAME
+            =================================-->
+                    <p class="text-uppercase mt-1" style="font-size: 3em; font-family: 'Goudy Old Style', serif; text-shadow: 2px 1px 10px #000; letter-spacing: 10px;">
+                        
+                     Name
+                      
+                    </p>
+                </div>
+            </div>
+            <!--END PROFILE IMAGE & NAME -->
+            
+            
+            
+            
+            
+        <!-- 
+            =================================
+            
+                    BASIC INFO
+                    
+            For this section, you have to fill out all the info twice,
+            once for smaller screens, and once for larger ones.
+            
+            =================================
+        -->
+            
+        <!-- =================================
+                BASICS - Large Screens
+            =================================-->
+            <div class="d-none d-lg-block" style="position: absolute; top:15px; right:10px; filter: drop-shadow(0 0 5px #000);">
+            <div style="min-width: 250px; filter: drop-shadow(0px 0px 3px #000);">
+                <div class="row no-gutters justify-content-between mt-2">
+                    <p class="text-uppercase">Species</p>
+                    <p class="ml-5 mt-n2" style="font-variant: small-caps; font-size: 1.5em">
+                        
+                        Species
+                        
+                    </p>
+                </div>
+                
+                <div class="row no-gutters justify-content-between">
+                    <p class="text-uppercase">Age</p>
+                    <p class="ml-5 mt-n2" style="font-variant: small-caps; font-size: 1.5em">
+                        
+                        Age 
+                        
+                    </p>
+                </div>
+                
+                <div class="row no-gutters justify-content-between">
+                    <p class="text-uppercase">Pronouns</p>
+                    <p class="ml-5 mt-n2" style="font-variant: small-caps; font-size: 1.5em">
+                        
+                        pro/noun
+                        
+                    </p>
+                </div>
+            </div>
+            </div>
+
+        <!-- =================================
+                BASICS - Small Screens
+            =================================-->
+            <div class="d-block d-lg-none d-flex justify-content-center">
+            <div style="min-width: 225px; filter: drop-shadow(0px 1px 3px #000);">
+                
+                <div class="row no-gutters justify-content-between">
+                    <p class="text-uppercase mt-2" style="font-size: 0.8em">Species</p>
+                    <p class="ml-5" style="font-variant: small-caps; font-size: 1.3em">
+                        
+                        Species 
+                        
+                    </p>
+                </div>
+                
+                <div class="row no-gutters justify-content-between">
+                    <p class="text-uppercase mt-2" style="font-size: 0.8em">Age</p>
+                    <p class="ml-5" style="font-variant: small-caps; font-size: 1.3em">
+                        
+                        Age 
+                        
+                    </p>
+                </div>
+                
+                <div class="row no-gutters justify-content-between">
+                    <p class="text-uppercase mt-2" style="font-size: 0.8em">Pronouns</p>
+                    <p class="ml-5" style="font-variant: small-caps; font-size: 1.3em">
+                        
+                        pro/nouns 
+                        
+                    </p>
+                </div>
+            </div>
+            </div>
+            <!-- END BASIC INFO -->
+            </div>
+            <div class="mx-auto mt-n1" style="height: 2px; background: linear-gradient(to right, rgba(26,26,27,0.058), rgba(255,255,255,0.9), rgba(26,26,27,0.058)); width: 80%; max-width: 70%"></div>
+        </div>
+        <!-- END NAME BANNER -->
+
+        <!-- SECOND ROW -->
+        <div class="row no-gutters ml-lg-3">
+            
+            <!-- 
+            =================================
+                
+                       OVERVIEW
+                
+            =================================
+            -->
+            <div class="col-lg-6" style="max-height:250px; overflow: auto; scrollbar-width: none;">
+                <p class="text-center" style="font-family: 'Goudy Old Style'; font-size: 1.5em; font-weight: bold; font-variant: small-caps; letter-spacing: 2px; color:rgba(255,255,255,0.62)"> Overview </p>
+                <div class="mt-1">
+                    
+                    <p>Write as little or as much as you want, this box will scroll! </p>
+ 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. </p>
+                    
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus. </p>
+                </div>
+            </div>
+            <!-- END OVERVIEW TEXT -->
+            
+
+            <!-- Small Screen Divider -->
+            <div class="d-lg-none col-12 justify-content-center my-4">
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158496_x320VUXlsWiVxUX.png" style="max-height:50px">
+            </div>
+            
+ 
+            <!-- 
+            =================================
+                
+                         TRIVIA
+                
+            =================================
+            -->
+            <div class="col-lg-6 col-12" style="max-height:250px; overflow: auto; scrollbar-width: none;">
+                <p class="text-center" style="font-family: 'Goudy Old Style'; font-size: 1.5em; font-weight: bold; font-variant: small-caps; letter-spacing: 2px; color:rgba(255,255,255,0.62)"> Trivia </p>
+                <ul class="mb-2">
+                    <li> This box will also scroll, add as much trivia as you want</li>
+                    <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio.</li>
+                    <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus.</li>
+                    <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio.</li>
+                    <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio.</li>
+                    <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus.</li>
+                    <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio.</li>
+                </ul>
+            </div>
+            <!--- END TRIVIA -->
+            
+        </div>
+        <!-- END SECOND ROW -->
+ 
+        </div>
+        </div>
+        <!-- END BASICS CAROUSEL ITEM -->
+        
+        
+        
+        
+        
+        
+<!-- 
+=================================
+    
+        INVENTORY PAGE
+    
+=================================
+-->
+        <div class="carousel-item">
+        <div class="row no-gutters">
+            
+        <!-- TITLE -->
+            <div class="text-uppercase" style="position: absolute; top: -70px; left: 50%; transform: translateX(-50%); z-index: 9999; padding: 5px 20px; font-family: 'Goudy Old Style'; font-size: 2em; letter-spacing: 3px;">
+                      Inventory
+            </div>
+            
+        <!-- LEFT PANEL -->
+        <div class="col-md-2 col-12 d-flex align-self-center justify-content-center" style="max-height: 100%;"><div class="d-flex flex-column align-items-center">
+            
+            
+            <!-- 
+            =================================
+                
+                        WEAPON
+                
+            =================================
+            -->
+            <a class="" style="max-height: 100%;"><img src="
+            
+            https://static.wikia.nocookie.net/hollowknight/images/e/e4/Nail_4_Coiled_Nail.png
+            
+            " style="height: 330px;">
+            </a>
+            <!-- END WEAPON -->
+        </div>
+        
+            <!-- 
+            =================================
+                
+                        GEO
+                
+            =================================
+            -->
+            <p class="d-flex align-items-center align-self-end mr-n3" style="font-family: 'Goudy Old Style'; font-size: 1.5em; margin-bottom: 0.5rem;">
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158547_6KbRC5t5jMdRnc0.png" class="mr-1" style="height: 25px;">
+                
+                500
+                
+            </p>
+            <!-- END GEO -->
+        </div>
+        <!-- END LEFT PANEL -->
+        
+                <!-- VERTICAL LINE  -->
+                <div class="d-none d-md-block my-5" style=" width: 1px; background: linear-gradient(to bottom, #191921, #FFFFFF, #191921); margin: 0 20px;border-radius: 1px;"></div>
+        
+        <!--DIVIDER only on small screens -->
+        <div class="col justify-content-center my-4 d-lg-none">
+            <div class="col mx-1" style="height: 1px; background: linear-gradient(to left, #191921, #FFFFFF, #191921); margin: 0 20px;border-radius: 1px;"></div>
+        </div>
+        <!-- END DIVIDER -->
+        
+        
+        
+        <!-- MIDDLE PANEL -->
+        <div class="col-12 col-md d-flex ml-3 align-items-center">
+        <div class="d-flex flex-column">
+                
+            <!-- 
+            =================================
+                
+                        CHARMS
+                
+                To change the charm, just change the image then the info
+                in the tab section
+                
+                If you want to add more you can, but you have
+                to add it here, make sure to change the href="#tabname" to something unique
+                and add a tab in the charms/items tab section 
+                with a matching id=""
+                
+                
+                If you want help with that lemme know
+                
+                
+                I got all the images and descriptions from the Hollow Knight wiki
+                
+            =================================
+            -->
+            <p class="text-left" style="font-family: 'Goudy Old Style'; font-size: 1.5em; margin-bottom: 0.5rem;">Equipped</p>
+        
+            <!-- CHARMS / TAB NAV -->
+            <div class="mb-3 nav nav-tabs d-flex " style="border:0px; flex-wrap: wrap;">
+              
+                <!--=================================
+                              CHARM 1
+                =================================-->
+                <a data-toggle="tab" href="#one" style="margin: 4px;">
+                    <img src="
+                    
+                https://static.wikia.nocookie.net/hollowknight/images/5/5f/Quick_Slash.png
+                    
+                    " style="height: 55px; width: 55px; object-fit: contain;" class="mr-3"></a>
+        
+                <!--=================================
+                             CHARM 2
+                =================================-->
+                <a data-toggle="tab" href="#two" style="margin: 4px;">
+                    <img src="
+                  
+                https://static.wikia.nocookie.net/hollowknight/images/6/69/Mark_of_Pride.png
+                  
+                    " style="height: 55px; width: 55px; object-fit: contain;" class="mr-3"> </a>
+        
+                <!--=================================
+                             CHARM 3
+                =================================-->
+                <a data-toggle="tab" href="#three" style="margin: 4px;">
+                    <img src="
+                  
+                  https://static.wikia.nocookie.net/hollowknight/images/0/0f/Nailmaster%27s_Glory.png
+                  
+                    " style="height: 55px; width: 55px; object-fit: contain;" class="mr-3"></a>
+        
+                <!--=================================
+                             CHARM 4
+                =================================-->
+                <a data-toggle="tab" href="#four" style="margin: 4px;">
+                    <img src="
+                 
+                 https://static.wikia.nocookie.net/hollowknight/images/e/e9/Sprintmaster.png
+                 
+                    " style="height: 55px; width: 55px; object-fit: contain;" class="mr-3"></a>
+        
+                <!--=================================
+                             CHARM 5
+                =================================-->
+                <a data-toggle="tab" href="#five" style="margin: 4px;">
+                    <img src="
+                    
+                    https://static.wikia.nocookie.net/hollowknight/images/1/13/Sharp_Shadow.png
+                    
+                    " style="height: 55px; width: 55px; object-fit: contain;"></a>
+            </div>
+            
+            <!--
+            =================================
+            
+                         NOTCHES
+                         
+                Add or remove as many of these as you want
+                
+                Lit: 
+                    <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                
+                Unlit:
+                    <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158593_QaDYRqNWsYOELOR.png" class="mr-n1" style="height: 27px;">
+            =================================
+            -->
+            <p class="text-left mt-n2" style="font-family: 'Goudy Old Style'; font-size: 1.2em; margin-bottom: 0.5rem;">
+                    Notches: 
+                </p>
+            <p class="mt-n2">
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158593_QaDYRqNWsYOELOR.png" class="mr-n1" style="height: 25px;">
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158593_QaDYRqNWsYOELOR.png" class="mr-n1" style="height: 27px;">
+            </p>
+            <!-- END NOTCHES -->
+            <!-- END CHARMS -->
+               
+               
+            
+            <!-- DIVIDER -->
+            <p class="text-left" style="font-family: 'Goudy Old Style'; font-size: 1.5em; margin-bottom: 0.5rem;">
+                <img class="hidden-lg-down" src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158496_x320VUXlsWiVxUX.png" style="filter: drop-shadow(0px 1px 8px #000000);">
+                <img class="hidden-xl-up" src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158496_x320VUXlsWiVxUX.png" style="filter: drop-shadow(0px 1px 8px #000000);">
+            </p>
+            <!-- END DIVIDER -->
+            
+            <!-- 
+            =================================
+                
+                        ITEMS
+                
+                Same as the charms basically, just different images, which 
+                also came from the Hollow Knight wiki
+                
+            =================================
+            -->
+            <p class="text-left" style="font-family: 'Goudy Old Style'; font-size: 1.5em; margin-bottom: 0.5rem;"> Inventory
+            </p>
+        
+            <!-- ITEMS / TAB NAV -->
+            <div class="mb-3 nav nav-tabs d-flex" style="border:0px; flex-wrap: wrap;">
+              
+                <!--=================================
+                              ITEM 1
+                =================================-->
+                <a data-toggle="tab" href="#six" style="margin: 4px;">
+                    <img src="https://static.wikia.nocookie.net/hollowknight/images/7/75/Icon_HK_Shade_Cloak.png" style="height: 55px; width: 55px; object-fit: contain; filter: drop-shadow(0px 1px 8px #464655);" class="mr-3">
+                </a>
+                
+                <!--=================================
+                              ITEM 2
+                =================================-->
+                <a data-toggle="tab" href="#seven" style="margin: 4px;">
+                  <img src="
+                  
+                  https://static.wikia.nocookie.net/hollowknight/images/b/bf/Icon_HK_Mantis_Claw.png
+                  
+                  " style="height: 55px; width: 55px; object-fit: contain;" class="mr-3"></a>
+        
+                <!--=================================
+                              ITEM 3
+                =================================-->
+                <a data-toggle="tab" href="#eight" style="margin: 4px;">
+                  <img src="
+                  
+                  https://static.wikia.nocookie.net/hollowknight/images/9/9b/Icon_HK_Monarch_Wings.png
+                  
+                  " style="height: 55px; width: 55px; object-fit: contain;" class="mr-3"></a>
+        
+                <!--=================================
+                              ITEM 4
+                =================================-->
+                <a data-toggle="tab" href="#nine" style="margin: 4px;">
+                    <img src="https://static.wikia.nocookie.net/hollowknight/images/f/f3/Simple_Key.png" style="height: 55px; width: 55px; object-fit: contain;" class="mr-3">
+               </a>
+               
+                <!--=================================
+                              ITEM 5
+                =================================-->
+                <a data-toggle="tab" href="#ten" style="margin: 4px;">
+                  <img src="
+                  
+                  https://static.wikia.nocookie.net/hollowknight/images/5/5f/Lumafly_Lantern.png
+                  
+                  " style="height: 55px; width: 55px; object-fit: contain;" class="mr-3"></a>
+        
+                <!--=================================
+                              ITEM 6
+                =================================-->
+                <a data-toggle="tab" href="#eleven" style="margin: 4px;">
+                  <img src="
+                  
+                  https://static.wikia.nocookie.net/hollowknight/images/7/73/Scroll_Map_Feather.png
+                  
+                  " style="height: 55px; width: 55px; object-fit: contain;" class="mr-3"></a>
+               
+            </div>
+            <!-- END ITEMS-->
+        </div>
+        </div>
+        <!-- END MIDDLE PANEL -->
+
+                <!-- VERTICAL LINE  -->
+                <div class="d-none d-md-block my-5" style=" width: 1px; background: linear-gradient(to bottom, #191921, #FFFFFF, #191921); margin: 0 20px;border-radius: 1px;"></div>
+
+        <!-- RIGHT PANEL -->
+        <div class="col-md-4 col-12 d-flex align-items-center justify-content-center px-4" style="height:600px">
+            
+            <!-- 
+            =================================
+                
+                        ITEMS
+                
+                This is the section to add more charms or items
+                Just pick one to duplicate then make sure to change
+                the id="" to match the href="#" you gave your new item
+                
+                
+                For the cost part, add or remove this:
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+            =================================
+            -->
+            <div class="tab-content">
+                
+                <!--=================================
+                              CHARM 
+                =================================-->
+                <div class="tab-pane fade active show" id="one">
+                    <div class="text-center my-3">
+                        <p style="font-family: 'Goudy Old Style'; font-size: 1.5em;">
+                            
+                            Quick Slash 
+                            
+                        </p>
+                        
+                        <!-- COST -->
+                        <p style="font-size: 1em; font-family:'Goudy Old Style';">
+                            Cost: 
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="" style="height: 25px;">
+                        </p>
+                        <!-- END COST -->
+                        
+                        <p class="text-left"> Born from imperfect, discarded nails that have fused together. The nails still long to be wielded. Allows the bearer to slash much more rapidly with their nail.  </p>
+                        
+                        <p class="text-left"> Second little paragraph about how they got this charm or why it's important or something else idk you could also just get rid of this. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+                    </div>
+                </div>
+                <!-- END CHARM -->
+                
+                <!--=================================
+                              CHARM 
+                =================================-->
+                <div class="tab-pane fade" id="two">
+                <div class="text-center my-3">
+                    <p style="font-family: 'Goudy Old Style'; font-size: 1.5em;">Mark of Pride </p>
+                    
+                    <!-- COST-->
+                    <p style="font-size: 1em; font-family:'Goudy Old Style';">
+                        Cost: 
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="" style="height: 25px;">
+                    </p>
+                    <!-- END COST -->
+                    
+                    <p class="text-left"> Freely given by the Mantis Tribe to those they respect. Greatly increases the range of the bearer's nail, allowing them to strike foes from further away. </p>
+                    
+                    <p class="text-left"> Second little paragraph about how they got this charm or why it's important or something else idk you could also just get rid of this. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+
+                </div>
+                </div>
+                <!-- END CHARM -->
+                
+                <!--=================================
+                              CHARM 
+                =================================-->
+                <div class="tab-pane fade" id="three">
+                <div class="text-center my-3">
+                    <p style="font-family: 'Goudy Old Style'; font-size: 1.5em;">Nailmaster's Glory</p>
+                    
+                    <!-- COST-->
+                    <p style="font-size: 1em; font-family:'Goudy Old Style';">
+                        Cost: 
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                        
+                    </p>
+                    <!-- END COST -->
+                    
+                    <p class="text-left"> Contains the passion, skill and regrets of a Nailmaster. Increases the bearer's mastery of Nail Arts, allowing them to focus their power faster and unleash arts sooner. </p>
+                    
+                    <p class="text-left"> Second little paragraph about how they got this charm or why it's important or something else idk you could also just get rid of this. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+
+                </div>
+                </div>
+                <!-- END CHARM -->
+                
+                <!--=================================
+                              CHARM 
+                =================================-->
+                <div class="tab-pane fade" id="four">
+                <div class="text-center my-3">
+                    <p style="font-family: 'Goudy Old Style'; font-size: 1.5em;">Sprintmaster </p>
+                    
+                    <!-- COST-->
+                    <p style="font-size: 1em; font-family:'Goudy Old Style';">
+                        Cost: 
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                    </p>
+                    <!-- END COST -->
+                    
+                    <p class="text-left"> Bears the likeness of a strange bug known only as 'The Sprintmaster'. Increases the running speed of the bearer, allowing them to avoid danger or overtake rivals.  </p>
+                    
+                    <p class="text-left"> Second little paragraph about how they got this charm or why it's important or something else idk you could also just get rid of this. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+
+                </div>
+                </div>
+                <!-- END CHARM -->
+                
+                <!--=================================
+                              CHARM 
+                =================================-->
+                <div class="tab-pane fade" id="five">
+                <div class="text-center my-3">
+                    <p style="font-family: 'Goudy Old Style'; font-size: 1.5em;">Sharp Shadow </p>
+                    
+                    <!-- COST-->
+                    <p style="font-size: 1em; font-family:'Goudy Old Style';">
+                        Cost: 
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158573_l5Kixz9ucQAmemN.png" class="mr-n1" style="height: 25px;">
+                    </p>
+                    <!-- END COST -->
+                    
+                    <p class="text-left"> Contains a forbidden spell that transforms shadows into deadly weapons. When using Shadow Dash, the bearer's body will sharpen and damage enemies. </p>
+                    
+                    <p class="text-left"> Second little paragraph about how they got this charm or why it's important or something else idk you could also just get rid of this. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+
+                </div>
+                </div>
+                <!-- END CHARM -->
+                
+                
+            <!-- ITEMS BEGIN -->
+                
+                
+                <!--=================================
+                                ITEM
+                =================================-->
+                <div class="tab-pane fade" id="six">
+                <div class="text-center my-3">
+                    <p style="font-family: 'Goudy Old Style'; font-size: 1.5em;">Shade Cloak </p>
+                    
+                    <p class="text-left"> Cloak formed from the substance of the Abyss. Allows the wearer to dash through enemies and their attacks without taking damage. </p>
+                    
+                    <p class="text-left"> Second little paragraph about how they got this charm or why it's important or something else idk you could also just get rid of this. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+
+                </div>
+                </div>
+                <!-- END ITEM -->
+                
+                <!--=================================
+                                ITEM
+                =================================-->
+                <div class="tab-pane fade" id="seven">
+                <div class="text-center my-3">
+                    <p style="font-family: 'Goudy Old Style'; font-size: 1.5em;">Mantis Claw </p>
+                    
+                    <p class="text-left"> Claw carved from bone. Allows the wearer to cling to walls and leap off them. </p>
+                    
+                    <p class="text-left"> Second little paragraph about how they got this charm or why it's important or something else idk you could also just get rid of this. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+
+                </div>
+                </div>
+                <!-- END ITEM -->
+                
+                <!--=================================
+                                ITEM
+                =================================-->
+                <div class="tab-pane fade" id="eight">
+                <div class="text-center my-3">
+                    <p style="font-family: 'Goudy Old Style'; font-size: 1.5em;">Monarch Wings </p>
+                    
+                    <p class="text-left"> Wings of ethereal matter that shimmer in the darkness. Allow one to jump again in mid-air. </p>
+                    
+                    <p class="text-left"> Second little paragraph about how they got this charm or why it's important or something else idk you could also just get rid of this. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+
+                </div>
+                </div>
+                <!-- END ITEM -->
+                
+                <!--=================================
+                                ITEM
+                =================================-->
+                <div class="tab-pane fade" id="nine">
+                <div class="text-center my-3">
+                    <p style="font-family: 'Goudy Old Style'; font-size: 1.5em;">Simple Key </p>
+                    
+                    <p class="text-left"> Cheaply manufactured from a common design. Can be used to open a range of simple locks. Flimsily made, it breaks after a single use. </p>
+                    
+                    <p class="text-left"> Second little paragraph about how they got this charm or why it's important or something else idk you could also just get rid of this. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+
+                </div>
+                </div>
+                <!-- END ITEM -->
+                
+                
+                <!--=================================
+                                ITEM
+                =================================-->
+                <div class="tab-pane fade" id="ten">
+                <div class="text-center my-3">
+                    <p style="font-family: 'Goudy Old Style'; font-size: 1.5em;">Lumafly Lantern </p>
+                    
+                    <p class="text-left"> Crystal lantern containing a Lumafly. Brightens dark caverns so wanderers can find their way. </p>
+                    
+                    <p class="text-left"> Second little paragraph about how they got this charm or why it's important or something else idk you could also just get rid of this. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+
+                </div>
+                </div>
+                <!-- END ITEM -->
+                
+                
+                <!--=================================
+                                ITEM
+                =================================-->
+                <div class="tab-pane fade" id="eleven">
+                <div class="text-center my-3">
+                    <p style="font-family: 'Goudy Old Style'; font-size: 1.5em;">Map and Quill </p>
+                    
+                    <p class="text-left"> Map of Hallownest. When resting at a bench or elsewhere, the quill can be used to update the map with newly discovered areas. </p>
+                    
+                    <p class="text-left"> Second little paragraph about how they got this charm or why it's important or something else idk you could also just get rid of this. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+
+                </div>
+                </div>
+                <!-- END ITEM -->
+            </div>
+            <!-- END TAB CONTENT -->
+
+        </div>
+        <!-- END RIGHT PANEL -->
+        </div></div>
+        <!-- END INVENTORY -->
+        
+        
+        
+        
+        
+<!-- 
+=================================
+    
+        DESIGN NOTES PAGE
+    
+=================================
+-->
+    <div class="carousel-item">
+    <div class="row no-gutters align-items-center justify-content-center p-3" style="min-height: 600px;">
+        
+        <!-- TITLE -->
+            <div class="text-uppercase" style="position: absolute; top: -70px; left: 50%; transform: translateX(-50%); z-index: 9999; padding: 5px 20px; font-family: 'Goudy Old Style'; font-size: 2em; letter-spacing: 3px; white-space: nowrap;">
+                      Design notes
+            </div>
+            
+            <div class="col-md-4 justify-content-center mx-md-5" style="margin-top: 40px; margin-bottom: 30px;">
+                
+            <!--
+            =================================
+            
+                     REFERENCE IMAGE
+                     
+            =================================
+            -->
+                <img src="
+                
+            https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/large/800/Hornet.Hollow-Knight.webp
+                
+                " style="width: 100%; object-fit: cover; border-radius: 20px; height: 450px;">
+            </div>
+
+            <!-- Small Screen Gap -->
+            <div class="d-lg-none col-12 justify-content-center my-4"></div>    
+            
+            
+            <!--- COLORS + TRIVIA -->
+            <div class="col-lg-6 col-12">
+                
+                
+            <!--
+            =================================
+            
+                    COLOR PALETTE
+                You can add or remove as many as you want
+                but I would recommend keeping 8 or less colors
+                
+            =================================
+            -->
+                <div class="row no-gutters mb-4 justify-content-center mx-n5">
+ 
+                    <div class="card border-1 mx-1" style="height:25px; width:10%; background-color:
+                        #dfdce0
+                        ; border: 1px solid; border-radius: 10%;"></div>
+                    <div class="card border-1  mx-1" style="height:25px; width:10%; background-color:
+                        #88818a
+                        ; border: 1px solid; border-radius: 10%;"></div>
+                    <div class="card border-1  mx-1" style="height:25px; width:10%; background-color:
+                        #58535a
+                        ; border: 1px solid; border-radius: 10%;"></div>
+                    <div class="card border-1 mx-1" style="height:25px; width:10%; background-color:
+                        #403d40
+                        ; border: 1px solid; border-radius: 10%;"></div>
+                    <div class="card border-1  mx-1" style="height:25px; width:10%; background-color:
+                        #181718
+                        ; border: 1px solid; border-radius: 10%;"></div>
+                    <div class="card border-1  mx-1" style="height:25px; width:10%; background-color:
+                        #000000
+                        ; border: 1px solid; border-radius: 10%;"></div>
+
+                    <!-- Add or remove colors above this line-->
+                    
+                </div>
+                <!-- END COLOR PALETTE -->
+                
+
+                <!-- Small Screen Divider -->
+                <div class="col-12 justify-content-center my-4">
+                    <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158654_pQYWgMxYhoqXs6q.png" style="max-height:30px">
+                </div>
+                
+                
+            <!--
+            =================================
+            
+                    NOTABLE FEATURES
+                     
+            =================================
+            -->
+                <div class="row no-gutters mt-5" style="max-height:250px; overflow: auto; scrollbar-width: none;">
+                    <p class="text-center" style="font-family: 'Goudy Old Style'; font-size: 1.5em; font-weight: bold; font-variant: small-caps; letter-spacing: 2px; color:rgba(255,255,255,0.62)"> Notable Features </p>
+                <ul class="mb-2">
+                    <li>This box will scroll, add as much as you want</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio.</li>
+                    
+                </ul>
+                    
+                </div>
+            </div>
+            <!--- END NOTABLE FEATURE -->
+
+    </div>
+    </div>
+    <!-- END DESIGN NOTES CAROUSEL ITEM -->
+        
+        
+        
+        
+        
+<!-- 
+=================================
+    
+        RELATIONSHIPS PAGE
+        
+    someone admire how much like the hunter's jounral this looks
+    it took so long aaa
+    
+=================================
+-->
+        <div class="carousel-item">
+        <div class="row no-gutters align-items-center" style="min-height: 600px;">
+            
+        <!-- TITLE -->
+            <div class="text-uppercase" style="position: absolute; top: -70px; left: 50%; transform: translateX(-50%); z-index: 9999; padding: 5px 20px; font-family: 'Goudy Old Style'; font-size: 2em; letter-spacing: 3px;">
+                      Relationships
+            </div>
+        
+        
+        <!-- LEFT PANEL -->
+        <div class="col-md-4 d-flex align-self-center justify-content-center">
+        <div class="d-flex flex-column ">
+
+    <!--
+    =================================
+            
+            LIST OF CHARACTERS
+            
+        Just like the charms/items you can add more,
+        you just have to make sure to change the href="#"
+        then create a matching id="" in the tab section
+                     
+    =================================
+    -->
+        <ul class="nav row no-gutters d-lg-block align-items-center justify-content-left mx-5">
+            
+            
+            <!--=================================
+                        CHARACTER
+            =================================-->
+            <li class="nav-item align-items-center justify-content-center p-1 my-2" style="position: relative">
+                <!-- DIVIDER -->
+                <div style="height: 1px; width: 60%; background: linear-gradient(to right, #191921, #FFFFFF, #191921); position: absolute; top: 1px; left: 50%; transform: translateX(-50%); z-index: 10; width: 100%;"></div>
+                
+                <a class="nav-link active btn border-0" style=" height: 60px; width: 200px; z-index: 2; background: #fff; opacity: .0001;" data-toggle="tab"
+                href="#first"></a>
+                
+                
+                <div class="row no-gutters mt-1 d-flex align-items-center" style="position: absolute; width: 100%;">
+                    
+                    <div style="position: relative; width: 50px; height: 50px; ">
+                        
+                        
+                        <!--=================================
+                                    IMAGE
+                        =================================-->
+                        <img src="
+                        
+                        https://static.wikia.nocookie.net/hollowknight/images/f/f2/HJ_Hornet.png
+                        
+                        
+                        " style="width: 40px; height: 40px; border-radius: 50%; overflow: hidden; position:relative; top:5px; left:5px">
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158688_GdELCVPyb9kp5LV.png" style="width: 50px; height: 50px; position: absolute; top: 0; left: 0; border-radius: 50%; ">
+                    </div>
+                    <div class="col-md col-9">
+                    <div style="font-family: Goudy Old Style; font-size: 1.3em;">
+                        
+                        <!--=============================
+                                    NAME
+                        =================================-->
+                        
+                            Character One
+                            
+                            
+                    </div>
+                    </div>
+
+                </div>
+                
+                <div style="height: 1px; width: 60%; background: linear-gradient(to right, #191921, #FFFFFF, #191921); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 10;  width: 100%;"></div>
+                
+
+            </li>
+            <!-- END CHARACTER -->
+
+            <!--=================================
+                        CHARACTER
+            =================================-->
+            <li class="nav-item align-items-center justify-content-center p-1 my-2 mt-n2" style="position: relative">
+                
+                <a class="nav-link btn border-0" style=" height: 60px; width: 200px; z-index: 2; background: #fff; opacity: .0001;" data-toggle="tab"
+                href="#second"></a>
+                
+                
+                <div class="row no-gutters mt-1 d-flex align-items-center" style="position: absolute; width: 100%;">
+                    
+                    <div style="position: relative; width: 50px; height: 50px; ">
+                        
+                        <!--=================================
+                                    IMAGE
+                        =================================-->
+                        <img src="
+                        
+                        https://static.wikia.nocookie.net/hollowknight/images/f/f2/HJ_Hornet.png
+                        
+                        " style="width: 40px; height: 40px; border-radius: 50%; overflow: hidden; position:relative; top:5px; left:5px">
+                        
+                        
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158688_GdELCVPyb9kp5LV.png" style="width: 50px; height: 50px; position: absolute; top: 0; left: 0; border-radius: 50%; ">
+                    </div>
+                    <div class="col-md col-9">
+                    <div style="font-family: Goudy Old Style; font-size: 1.3em;">
+
+                        <!--=================================
+                                    NAME
+                        =================================-->
+                            Character Two
+                            
+                            
+                    </div>
+                    </div>
+
+                </div>
+                
+                <div style="height: 1px; width: 60%; background: linear-gradient(to right, #191921, #FFFFFF, #191921); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 10;  width: 100%;"></div>
+                
+
+            </li>
+            <!-- END CHARACTER -->
+            
+            <!--=================================
+                        CHARACTER
+            =================================-->
+            <li class="nav-item align-items-center justify-content-center p-1 my-2 mt-n2" style="position: relative">
+                
+                <a class="nav-link btn border-0" style=" height: 60px; width: 200px; z-index: 2; background: #fff; opacity: .0001;" data-toggle="tab"
+                href="#third"></a>
+                
+                
+                <div class="row no-gutters mt-1 d-flex align-items-center" style="position: absolute; width: 100%;">
+                    
+                    <div style="position: relative; width: 50px; height: 50px; ">
+                        
+                        <!--=================================
+                                    IMAGE
+                        =================================-->
+                        <img src="
+                        
+                        https://static.wikia.nocookie.net/hollowknight/images/f/f2/HJ_Hornet.png
+                        
+                        " style="width: 40px; height: 40px; border-radius: 50%; overflow: hidden; position:relative; top:5px; left:5px">
+                        
+                        
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158688_GdELCVPyb9kp5LV.png" style="width: 50px; height: 50px; position: absolute; top: 0; left: 0; border-radius: 50%; ">
+                    </div>
+                    <div class="col-md col-9">
+                    <div style="font-family: Goudy Old Style; font-size: 1.3em;">
+                        
+                        <!--=================================
+                                    NAME
+                        =================================-->
+                            Character Three
+                            
+                    </div>
+                    </div>
+
+                </div>
+                
+                <div style="height: 1px; width: 60%; background: linear-gradient(to right, #191921, #FFFFFF, #191921); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 10;  width: 100%;"></div>
+                
+
+            </li>
+            <!-- END CHARACTER NAME -->
+            
+            
+            <!--=================================
+                        CHARACTER
+            =================================-->
+            <li class="nav-item align-items-center justify-content-center p-1 my-2 mt-n2" style="position: relative">
+                
+                <a class="nav-link btn border-0" style=" height: 60px; width: 200px; z-index: 2; background: #fff; opacity: .0001;" data-toggle="tab"
+                href="#fourth"></a>
+                
+                
+                <div class="row no-gutters mt-1 d-flex align-items-center" style="position: absolute; width: 100%;">
+                    
+                    <div style="position: relative; width: 50px; height: 50px; ">
+                        
+                        <!--=================================
+                                    IMAGE
+                        =================================-->
+                        <img src="
+                        https://static.wikia.nocookie.net/hollowknight/images/f/f2/HJ_Hornet.png
+                        
+                        " style="width: 40px; height: 40px; border-radius: 50%; overflow: hidden; position:relative; top:5px; left:5px">
+                        
+                        
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158688_GdELCVPyb9kp5LV.png" style="width: 50px; height: 50px; position: absolute; top: 0; left: 0; border-radius: 50%; ">
+                    </div>
+                    <div class="col-md col-9">
+                    <div style="font-family: Goudy Old Style; font-size: 1.3em;">
+                        
+                        <!--=================================
+                                    NAME
+                        =================================-->
+                            Character Four
+                            
+                    </div>
+                    </div>
+
+                </div>
+                
+                <div style="height: 1px; width: 60%; background: linear-gradient(to right, #191921, #FFFFFF, #191921); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 10;  width: 100%;"></div>
+                
+
+            </li>
+            <!-- END CHARACTER NAME -->
+            
+            
+
+        </ul>
+        </div></div>
+        <!-- END LIST OF CHARACTERS -->
+        
+
+                <!-- VERTICAL LINE  -->
+                <div class="d-none d-lg-block my-5" style=" width: 1px; background: linear-gradient(to bottom, #191921, #FFFFFF, #191921); height: 400px;"></div>
+
+
+    <!--
+    =================================
+            
+            RELATIONSHIP DESCRIPTIONS
+            
+        uh i called them journal entries cuz it looks
+        like the hunter's journal
+                     
+    =================================
+    -->
+        <div class="col">
+        <div class="tab-content">
+            
+            <!--=================================
+                      JOURNAL ENTRY
+            =================================-->
+            <div class="tab-pane fade active show" id="first">
+            <div style="display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: center; align-items: center; width: 100%;" class="flex-md-row">
+        
+               
+                <div class="col-md-4" style="display: flex; justify-content: center; align-items: center; padding: 15px;">
+                    
+                    <!--=================================
+                                    IMAGE
+                      =================================-->
+                    <img src="
+                    
+                    https://static.wikia.nocookie.net/hollowknight/images/1/16/Hornet_Idle.png
+                    
+                    " class="mr-md-5" style="max-height: 450px; filter: drop-shadow(0 0 40px #5268b9);">
+                </div>
+            
+                        <!-- VERTICAL LINE -->
+                        <div class="d-none d-lg-block mr-4" style="width: 1px; background: linear-gradient(to bottom, #191921, #FFFFFF, #191921); height: 400px;"></div>
+            
+                <!-- TEXT CONTENT -->
+                <div class="col-md-4 mr-md-n5 ml-md-5">
+                    <div class="text-center my-3 mx-md-n5">
+                    
+                    <!--=================================
+                                NAME & LINK
+                    =================================-->
+                        <a style="font-family: 'Goudy Old Style'; font-size: 1.5em; color: white" href="LINK_HERE"> Character One </a>
+  
+                    
+                    <!--=================================
+                                    "HEARTS"
+                                    
+                            Use these to show how much the main character likes this one
+                            
+                            Full: <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158744_dNu1IkgOXjlkEV4.png" style="height: 27px; margin-top: 4px;">
+                            
+                            Empty: <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+
+                    =================================-->
+                        <div class="my-3">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158744_dNu1IkgOXjlkEV4.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158744_dNu1IkgOXjlkEV4.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+                        </div>
+  
+                        <p class="text-left"> Write something about how they feel about this character, or don't idk man </p>
+                        
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158807_ud2onj8TQE0gHWQ.png" class="m-3" style="height: 40px;">
+                        
+                        <p class="text-left"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus. </p>
+        
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- END JOURNAL ENTRY -->
+            
+            <!--=================================
+                      JOURNAL ENTRY
+            =================================-->
+            <div class="tab-pane fade" id="second">
+            <div style="display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: center; align-items: center; width: 100%;" class="flex-md-row">
+        
+
+                <div class="col-md-4" style="display: flex; justify-content: center; align-items: center; padding: 15px;">
+                    
+                    <!--=================================
+                                    IMAGE
+                    =================================-->
+                    <img src="
+                    
+                    https://static.wikia.nocookie.net/hollowknight/images/1/16/Hornet_Idle.png
+                    
+                    " class="mr-md-5" style="max-height: 450px; filter: drop-shadow(0 0 40px #5268b9);">
+                </div>
+            
+                        <!-- VERTICAL LINE -->
+                        <div class="d-none d-lg-block mr-4" style="width: 1px; background: linear-gradient(to bottom, #191921, #FFFFFF, #191921); height: 400px;"></div>
+            
+                <!-- TEXT CONTENT -->
+                <div class="col-md-4 mr-md-n5 ml-md-5">
+                    <div class="text-center my-3 mx-md-n5">
+                        
+                        
+                    <!--=================================
+                                NAME & LINK
+                    =================================-->
+                        <a style="font-family: 'Goudy Old Style'; font-size: 1.5em; color: white" href="LINK_HERE"> Character Two </a>
+  
+                    
+                    <!--=================================
+                                    "HEARTS"
+                                    
+                            Use these to show how much the main character likes this one
+                            
+                            Full: <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158744_dNu1IkgOXjlkEV4.png" style="height: 27px; margin-top: 4px;">
+                            
+                            Empty: <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+
+                    =================================-->
+                        <div class="my-3">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158744_dNu1IkgOXjlkEV4.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158744_dNu1IkgOXjlkEV4.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+                        </div>
+  
+                        <p class="text-left"> Write something about how they feel about this character, or don't idk man </p>
+                        
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158807_ud2onj8TQE0gHWQ.png" class="m-3" style="height: 40px;">
+                        
+                        <p class="text-left"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus. </p>
+        
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- END JOURNAL ENTRY -->
+            
+            <!--=================================
+                      JOURNAL ENTRY
+            =================================-->
+            <div class="tab-pane fade" id="third">
+            <div style="display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: center; align-items: center; width: 100%;" class="flex-md-row">
+        
+                
+                <div class="col-md-4" style="display: flex; justify-content: center; align-items: center; padding: 15px;">
+                    
+                    <!--=================================
+                                    IMAGE
+                      =================================-->
+                    <img src="
+                    
+                    https://static.wikia.nocookie.net/hollowknight/images/1/16/Hornet_Idle.png
+                    
+                    " class="mr-md-5" style="max-height: 450px; filter: drop-shadow(0 0 40px #5268b9);">
+                </div>
+            
+                        <!-- VERTICAL LINE -->
+                        <div class="d-none d-lg-block mr-4" style="width: 1px; background: linear-gradient(to bottom, #191921, #FFFFFF, #191921); height: 400px;"></div>
+            
+                <!-- TEXT CONTENT -->
+                <div class="col-md-4 mr-md-n5 ml-md-5">
+                    <div class="text-center my-3 mx-md-n5">
+                        
+                    <!--=================================
+                                NAME & LINK
+                    =================================-->
+                        <a style="font-family: 'Goudy Old Style'; font-size: 1.5em; color: white" href="LINK_HERE"> Character Three </a>
+  
+                    
+                    <!--=================================
+                                    "HEARTS"
+                                    
+                            Use these to show how much the main character likes this one
+                            
+                            Full: <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158744_dNu1IkgOXjlkEV4.png" style="height: 27px; margin-top: 4px;">
+                            
+                            Empty: <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+
+                    =================================-->
+                        <div class="my-3">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158744_dNu1IkgOXjlkEV4.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158744_dNu1IkgOXjlkEV4.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+                        </div>
+  
+                        <p class="text-left"> Write something about how they feel about this character, or don't idk man </p>
+                        
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158807_ud2onj8TQE0gHWQ.png" class="m-3" style="height: 40px;">
+                        
+                        <p class="text-left"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus. </p>
+        
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- END JOURNAL ENTRY -->
+            
+            
+            <!--=================================
+                      JOURNAL ENTRY
+            =================================-->
+            <div class="tab-pane fade" id="fourth">
+            <div style="display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: center; align-items: center; width: 100%;" class="flex-md-row">
+        
+                
+                <div class="col-md-4" style="display: flex; justify-content: center; align-items: center; padding: 15px;">
+                    
+                    <!--=================================
+                                    IMAGE
+                      =================================-->
+                    <img src="
+                    
+                    https://static.wikia.nocookie.net/hollowknight/images/1/16/Hornet_Idle.png
+                    
+                    " class="mr-md-5" style="max-height: 450px; filter: drop-shadow(0 0 40px #5268b9);">
+                </div>
+            
+                        <!-- VERTICAL LINE -->
+                        <div class="d-none d-lg-block mr-4" style="width: 1px; background: linear-gradient(to bottom, #191921, #FFFFFF, #191921); height: 400px;"></div>
+            
+                <!-- TEXT CONTENT -->
+                <div class="col-md-4 mr-md-n5 ml-md-5">
+                    <div class="text-center my-3 mx-md-n5">
+                    
+                    <!--=================================
+                                NAME & LINK
+                    =================================-->
+                        <a style="font-family: 'Goudy Old Style'; font-size: 1.5em; color: white" href="LINK_HERE"> Character Four </a>
+  
+                    
+                    <!--=================================
+                                    "HEARTS"
+                                    
+                            Use these to show how much the main character likes this one
+                            
+                            Full: <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158744_dNu1IkgOXjlkEV4.png" style="height: 27px; margin-top: 4px;">
+                            
+                            Empty: <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+
+                    =================================-->
+                        <div class="my-3">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158744_dNu1IkgOXjlkEV4.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158744_dNu1IkgOXjlkEV4.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158772_FI9eFLZoFB1Clrn.png" style="height: 27px; margin-top: 4px;">
+                        </div>
+  
+                        <p class="text-left"> Write something about how they feel about this character, or don't idk man </p>
+                        
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158807_ud2onj8TQE0gHWQ.png" class="m-3" style="height: 40px;">
+                        
+                        <p class="text-left"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus. </p>
+        
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- END JOURNAL ENTRY -->
+
+        </div>
+        </div>
+        <!-- END JOURNAL ENTRIES -->
+        
+        </div></div>
+        <!-- END RELATIONSHIPS / HUNTER'S JOURNAL CAROUSEL ITEM -->
+        
+
+
+<!-- 
+=================================
+    
+        HISTORY PAGE
+        
+    nothing too fancy here, just a basic history thing
+    
+=================================
+-->
+        <div class="carousel-item">
+        <div class="row no-gutters align-items-start justify-content-center p-3" style="min-height: 600px;">
+            
+            <!-- TITLE -->
+            <div class="text-uppercase" style="position: absolute; top: -70px; left: 50%; transform: translateX(-50%); z-index: 9999; padding: 5px 20px; font-family: 'Goudy Old Style'; font-size: 2em; letter-spacing: 3px;">
+                      HISTORY
+            </div> 
+            
+            
+            <div class="col-12 p-md-5" style="max-height: 550px; overflow: auto; scrollbar-width: none">
+                <p class="mb-1" style="font-family: 'Goudy Old Style'; font-size: 1.5em; font-weight: bold; font-variant: small-caps; letter-spacing: 2px; color:rgba(255,255,255,0.62)"> Subheader </p>
+                
+                <p>You can write as much as you want here too, the whole thing will start scrolling</p>
+
+                <p>Vivamus ut commodo purus. Nullam in consectetur nisl. Donec et libero non nulla aliquam maximus nec ac tortor. In hac habitasse platea dictumst. Pellentesque dignissim, risus vel molestie fermentum, diam ex mollis lacus, sit amet accumsan ante orci non lacus. Morbi placerat sollicitudin dui quis cursus. Duis eget commodo magna. Nunc sollicitudin nec nisi sit amet luctus. Ut id sagittis lorem. Nulla facilisi. Suspendisse ullamcorper lobortis magna ac porta. Duis eget commodo magna. Nunc sollicitudin nec nisi sit amet luctus. Ut id sagittis lorem. Nulla facilisi. Suspendisse ullamcorper lobortis magna ac porta.
+                </p>
+                
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158496_x320VUXlsWiVxUX.png">
+                
+                <p class="mb-1" style="font-family: 'Goudy Old Style'; font-size: 1.5em; font-weight: bold; font-variant: small-caps; letter-spacing: 2px; color:rgba(255,255,255,0.62)"> Subheader </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus.
+                </p>
+                <p>Vivamus ut commodo purus. Nullam in consectetur nisl. Donec et libero non nulla aliquam maximus nec ac tortor. In hac habitasse platea dictumst. Pellentesque dignissim, risus vel molestie fermentum, diam ex mollis lacus, sit amet accumsan ante orci non lacus. Morbi placerat sollicitudin dui quis cursus. Duis eget commodo magna. Nunc sollicitudin nec nisi sit amet luctus. Ut id sagittis lorem. Nulla facilisi. Suspendisse ullamcorper lobortis magna ac porta. Duis eget commodo magna. Nunc sollicitudin nec nisi sit amet luctus. Ut id sagittis lorem. Nulla facilisi. Suspendisse ullamcorper lobortis magna ac porta.
+                </p>
+                
+                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/106158496_x320VUXlsWiVxUX.png">
+                
+                <p class="mb-1" style="font-family: 'Goudy Old Style'; font-size: 1.5em; font-weight: bold; font-variant: small-caps; letter-spacing: 2px; color:rgba(255,255,255,0.62)"> Subheader </p>
+                <p>Vivamus ut commodo purus. Nullam in consectetur nisl. Donec et libero non nulla aliquam maximus nec ac tortor. In hac habitasse platea dictumst. Pellentesque dignissim, risus vel molestie fermentum, diam ex mollis lacus, sit amet accumsan ante orci non lacus. Morbi placerat sollicitudin dui quis cursus. Duis eget commodo magna. Nunc sollicitudin nec nisi sit amet luctus. Ut id sagittis lorem. Nulla facilisi. Suspendisse ullamcorper lobortis magna ac porta. Duis eget commodo magna. Nunc sollicitudin nec nisi sit amet luctus. Ut id sagittis lorem. Nulla facilisi. Suspendisse ullamcorper lobortis magna ac porta.
+                </p>
+                
+                <p>Vivamus ut commodo purus. Nullam in consectetur nisl. Donec et libero non nulla aliquam maximus nec ac tortor. In hac habitasse platea dictumst. Pellentesque dignissim, risus vel molestie fermentum, diam ex mollis lacus, sit amet accumsan ante orci non lacus. Morbi placerat sollicitudin dui quis cursus. Duis eget commodo magna. Nunc sollicitudin nec nisi sit amet luctus. Ut id sagittis lorem. Nulla facilisi. Suspendisse ullamcorper lobortis magna ac porta. Duis eget commodo magna. Nunc sollicitudin nec nisi sit amet luctus. Ut id sagittis lorem. Nulla facilisi. Suspendisse ullamcorper lobortis magna ac porta.
+                </p>
+                
+            </div>
+            
+            
+            
+        </div>
+        </div>
+        <!-- END HISTORY CAROUSEL ITEM -->
+        
+    </div></div>    
+    <!-- END CAROUSEL -->
+    
+    
+    <!-- CREDIT - DO NOT REMOVE -->
+    <div style="position: absolute; right: 10px; bottom:10px;">
+        <a data-toggle="tooltip" title="Code by Jellorat" href="https://toyhou.se/33465736.f2u-html-hollow-knight" style="color: #898787">
+            <i class="fas fa-code"> </i>
+        </a>
+    </div>
+    
+
+</div>
+</div>
+<!-- END MAIN CONTENT -->

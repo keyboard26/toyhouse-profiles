@@ -1,0 +1,674 @@
+﻿
+
+<!--
+
+    CLOUDS - F2U HTML
+        by Jellorat
+
+CODERS' QUARTERS CHALLENGE
+August 2025 - Prompt Pack 1
+Stumble - #1B
+    - A large layout with a relatively clear grid.
+    - Requires negative margins and z-index.
+
+
+https://toyhou.se/~world/82691.coders-quarters/page/161994.layout-pack-1
+
+
+Song code by https://toyhou.se/rainandhail
+
+    
+    Text/Background .... #ede4d6
+    Muted Text ......... #ca9981
+    Box BG ............. #794830
+    Secondary BG ....... #8f5d47
+    Overlay ............ rgba(121,72,48,0.30)
+        The overlay color is a transparent
+        color over the non-character images
+        to tie the colors together a bit
+
+-->
+
+
+
+<div class="container p-3" style="background:#ede4d6; max-width:1000px; font-family: serif; color:#ede4d6; font-size:15px; border-radius: 10px">
+    
+    
+<!-- top half -->
+<div class="row no gutters">
+    
+    <!-- left side -->
+    <div class="col-lg-3 col-12 mr-lg-n1">
+        
+        
+        
+<!--==============================
+
+          CHARACTER IMAGE
+            top left
+          
+==================================--> 
+        <div class="card rounded-0 p-2" style="height:175px; background-color:transparent; border-width: 2px; border-color:#794830">
+            <div style="background-image: url(
+        
+        
+    CHARACTER_IMAGE
+        
+        
+        ); background-position: center; background-size:cover; background-repeat: no-repeat; height:100%;"></div>
+        </div>
+        <!-- END CHARACTER IMAGE /ICON -->
+        
+        
+        
+<!--============================
+
+        BASIC INFO
+        
+==========================-->
+        <div class="card my-2 p-3" style="min-height:275px; background-color:#794830; border-radius:10px">
+            
+            <p class="mt-n2 mb-2" style="font-size: 25px; font-variant: small-caps; letter-spacing: 3px; border-bottom: 1px solid #ede4d6;">
+                Basics
+            </p>
+            
+            <div class="mx-lg-0">
+                <p class="justify-content-between">
+                    <span style="color:#ca9981;">
+                        <i class="fal fa-signature mr-2"></i>
+                        name
+                    </span>
+                    <span class="text-right" style="font-variant:small-caps;">
+                        
+                    Name
+                        
+                    </span>
+                </p>
+            </div>
+            
+            
+            <div class="mx-lg-0">
+                <p class="justify-content-between">
+                    <span style="color:#ca9981;">
+                        <i class="fal fa-venus-mars mr-2"></i>
+                        pronouns
+                    </span>
+                    <span class="text-right" style="font-variant:small-caps;">
+                        
+                    pro/nouns
+                        
+                    </span>
+                </p>
+            </div>
+            
+            
+            <div class="mx-lg-0">
+                <p class="justify-content-between">
+                    <span style="color:#ca9981;">
+                        <i class="fal fa-clock-rotate-left mr-2"></i>
+                        age
+                    </span>
+                    <span class="text-right"  style="font-variant:small-caps;">
+                        
+                    Age
+                        
+                    </span>
+                </p>
+            </div>
+            
+            
+            <div class="mx-lg-0">
+                <p class="justify-content-between" >
+                    <span style="color:#ca9981;">
+                        <i class="fal fa-dna mr-2"></i>
+                        species
+                    </span>
+                    
+                    <span class="text-right"  style="font-variant:small-caps;">
+                        
+                    Species
+                        
+                    </span>
+                </p>
+            </div>
+            
+            <div class="mx-lg-0">
+                <p class="justify-content-between align-items-center"  >
+                    <span style="color:#ca9981;">
+                        <i class="fal fa-briefcase mr-2"></i>
+                        occupation
+                    </span>
+                    <span class="text-right" style="font-variant:small-caps;">
+                        
+                    Job
+                    
+                    </span>
+                </p>
+            </div>
+            
+            
+            
+    <!--============================
+    
+            PLAYLIST
+            
+            This code was frankensteined from User Simple by rainandhail
+                https://toyhou.se/22056323.f2u-user-simple
+            
+            Replace the numbers/letters after /embed/ 
+            with the numbers/letters that come after
+            the watch?v= in your youtube url
+            
+    ==========================-->
+            <div class="card p-2 mt-3 flex-fill" style="min-height:50px; background-color:#8f5d47">
+                
+                <p class="my-1" style="font-variant:small-caps;">
+                    <iframe frameborder="0" style="position:absolute;height:1rem;width:1rem;opacity:0.001" src="
+                
+                https://www.youtube.com/embed/
+                
+                    "></iframe>
+    				<i class="fal fa-play fa-sm mx-2"></i> 
+    				
+    				Song Name or Title
+    				
+    				<br>
+    				<span class="ml-2 mr-1" style="color:#ca9981; font-variant:normal;"> by </span>
+    				
+    				Artist
+    			</p>
+    			
+            </div>
+            <!-- END PLAYLIST -->
+        </div>
+        <!-- END BASIC INFO -->
+        
+        
+        
+<!--====================
+
+          IMAGE
+      beneath basics
+          
+        this image is hidden on smaller screens, to
+        make it show remove "hidden-md-down"
+          
+========================-->    
+        <div class="card rounded-0 border-0 my-2 hidden-md-down" style="min-height:75px; background-image:url(
+        
+        
+        IMAGE
+        
+        
+        ); background-position: center; background-size:cover;">
+            <div style="position:absolute; height: 100%; width: 100%; background: rgba(121,72,48,0.30)"></div>
+        </div>
+        <!-- END IMAGE -->
+        
+        
+    </div>
+    <!-- end left side -->
+    
+    
+    <!-- right side -->
+    <div class="col-lg col-12 ml-lg-n3">
+    <div class="row no-gutters">
+        <div class="col-lg-9 col-12">
+            
+<!--==============================
+
+           NAME BANNER
+
+================================-->
+    <!-- BACKGROUND IMAGE -->
+            <div class="card rounded-0 text-center border-0" style="min-height:75px; font-size: 50px; font-variant: small-caps; letter-spacing: 3px; background-image:url(
+            
+            
+            IMAGE
+            
+            
+            );background-position:center; background-size:cover">
+                <div style="position:absolute; height: 100%; width: 100%; background: rgba(121,72,48,0.30)"></div>
+                <div style="position:absolute; width:98%; height:88%; border:1px solid #ede4d6; top:6%; left:1%"></div>
+                
+                <div class="row no-gutters align-items-center justify-content-center mt-1" style="z-index:2">
+                    
+                    
+        <!-- NAME + ICONS -->
+                <i class="fal fa-clouds mx-3 fa-xs hidden-md-down"></i>
+                <p style="filter:drop-shadow(1px 1px 3px #794830); color: #ede4d6">
+                    
+                    
+            Name
+                    
+                    
+                 </p> 
+                <i class="fal fa-clouds mx-3 fa-xs fa-flip-horizontal hidden-md-down" style="z-index:2"></i>
+                
+                
+                </div>
+            </div>
+        <!-- END NAME BANNER -->
+            
+            
+            <div class="row no-gutters my-2">
+                
+<!--==============================
+
+            COLOR PALETTE
+
+================================-->
+                <div class="col-1 mr-2 flex-column" style="height:200px;">
+                    
+                    <div class="flex-fill mt-0" style="width:100%; background-color:#74637e;"></div>
+                    <div class="flex-fill mt-1" style="width:100%; background-color:#8C859A"></div>
+                    <div class="flex-fill mt-1" style="width:100%; background-color:#A8A4B2"></div>
+                    <div class="flex-fill mt-1" style="width:100%; background-color:#E7D8CA"></div>
+                    <div class="flex-fill mt-1" style="width:100%; background-color:#e5b679"></div>
+                    <div class="flex-fill mt-1" style="width:100%; background-color:#CB8A4C"></div>
+                    <div class="flex-fill mt-1" style="width:100%; background-color:#9a643b;"></div>
+                    
+                    
+                    
+                    <!-- Add as many colors as you want above this line -->
+                    
+                </div>
+                <!-- END COLOR PALETTE -->
+                
+<!--==============================
+
+        ADJECTIVES + INTRO
+
+================================-->
+                <div class="col col-lg p-3" style="height:200px; background-color:#794830; overflow: auto; scrollbar-width: none; border-radius: 10px">
+                    <p class="text-center mt-n2 mb-2" style="font-size: 20px; font-variant: small-caps; letter-spacing: 3px; border-bottom: 1px solid #ede4d6;">
+                        
+                        adj
+                        
+                        <span style="color:#ca9981"> ~ </span>
+                        
+                        adj
+                        
+                        <span style="color:#ca9981"> ~ </span>
+                        
+                        adj
+                        
+                    </p>
+                    
+                    <p>
+                        Write a little character overview or introduction here, this will scroll so write as much as you want. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus. Curabitur ac finibus eros. Duis placerat velit vitae massa sodales, eget mattis nibh pellentesque.
+                    </p>
+                    
+                </div>
+                <!-- END ADJECTIVES + INTRO -->
+                
+            </div>
+        </div>
+        
+        
+<!--==============================
+
+          CHARACTER IMAGE
+            top right
+          
+==================================-->  
+        <div class="col mb-lg-n5 ml-lg-0 mt-n2 py-2 pl-lg-2 justify-content-center align-items-center" style="min-height:283px; background-color:#ede4d6; z-index: 10;">
+            <div class="card rounded-0 p-2" style="height: 100%; width:100%; background-color: transparent; z-index: 9; border: 2px solid #794830">
+                <div style="background-image:url(
+
+                
+        CHARACTER_IMAGE
+                
+
+                ); height:100%; width:100%; background-size: cover; background-position: center;"></div>
+            </div>
+        </div>
+        <!-- END IMAGE -->
+    </div>
+        
+        
+    
+    <div class="row no-gutters">
+        
+<!--===========================
+
+          STORY SECTION
+          
+===============================-->  
+        <div class="col-12 col-lg-10 p-3" style="height:300px; background-color:#794830;  border-radius: 10px">
+            <!-- there's two of the headers because one is for small screens and one's for large screens -->
+            <p class="mt-n2 mb-2 d-lg-none" style="font-size: 25px; font-variant: small-caps; letter-spacing: 3px; border-bottom: 1px solid #ede4d6;">
+                Story
+            </p>
+            <p class="mt-n2 mb-2 hidden-md-down" style="font-size: 25px; font-variant: small-caps; letter-spacing: 3px; border-bottom: 1px solid #ede4d6; width:89%">
+                Story
+            </p>
+            
+            <div style="overflow: auto; scrollbar-width: none; max-height:85%;">
+            
+                
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus. Curabitur ac finibus eros. Duis placerat velit vitae massa sodales, eget mattis nibh pellentesque.
+                </p>
+                
+                <!-- subheader code -->
+                <p class="mb-0" style="font-size: 20px; font-variant: small-caps; letter-spacing: 3px; color: #ca9981;">
+                    <i class="fal fa-xs fa-bookmark"></i>
+                Subheader
+                </p>
+                
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus. Curabitur ac finibus eros. Duis placerat velit vitae massa sodales, eget mattis nibh pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus. Curabitur ac finibus eros. Duis placerat velit vitae massa sodales, eget mattis nibh pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin elit sed tellus blandit viverra sed eget odio. Donec accumsan tempor lacus, et venenatis elit feugiat non. Duis porta eros et velit blandit dapibus. Curabitur ac finibus eros. Duis placerat velit vitae massa sodales, eget mattis nibh pellentesque.
+                </p>
+                <div class="hidden-md-down" style="height:50px"></div>
+            </div>
+        </div>
+        <!-- END STORY SECTION -->
+        
+        
+<!--====================
+
+          IMAGE
+       next to story
+          
+========================--> 
+        <div class="col-12 col-lg ml-lg-2 mt-lg-0 mt-2" style="min-height:100px; background-image:url(
+        
+        
+        IMAGE
+        
+        
+            ); background-size:cover; background-position: center;">
+            <div class="hidden-md-down" style="height:300px; width: 100%; background: rgba(121,72,48,0.30)"></div>
+            <div class="d-lg-none" style="height:150px; width: 100%; background: rgba(121,72,48,0.30)"></div>
+        </div>
+        <!-- END IMAGE -->
+          
+    </div>
+    </div>
+</div>
+<!-- end top half -->
+
+
+
+
+<!-- bottom half -->
+<div class="row no-gutters mt-n2">
+    <div class="col-12 col-lg-6">
+        
+        
+<!--==============================
+
+          PERSONALITY
+          
+==================================--> 
+        <div class="card rounded-0 mt-n5 mr-n2 mr-lg-0" style="min-height:250px; background-color:#ede4d6; z-index: 10; border-width: 8px 8px 0 0; border-color:#ede4d6;border-style: solid; border-radius:0 10px 0 0 ">
+        <div class="p-3" style="min-height:250px; width:100%; background-color: #794830; z-index: 9; border-radius:10px">
+            <p class="mt-n2 mb-2" style="font-size: 25px; font-variant: small-caps; letter-spacing: 3px; border-bottom: 1px solid #ede4d6;">
+                Personality
+            </p>
+          
+    <!-- SHORT DESCRIPTION -->  
+            <p class="mb-2">Short description of the character's personality can go here. I'd keep it to two or three lines, just for aestheic reasons :]</p>
+            
+            
+    <!-- PERSONALITY SLIDERS -->
+            <div class="row no-gutters">
+                <div class="col-lg-6 col-12 mr-3">
+                    <div class="justify-content-between align-items-center">
+                        <span class="text-right" style="font-variant:small-caps; font-size: 18px; letter-spacing: 2px;">
+                    Kindess
+                        </span>
+                        <div class="progress rounded-0 " style="height:5px; width:50%; background-color: #8f5d47">
+                        <div class="progress-bar" style="height: 6px; background: #ca9981; width: 
+                    50%
+                        ;"></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="justify-content-between align-items-center">
+                        <span class="text-right" style="font-variant:small-caps; font-size: 18px; letter-spacing: 2px;">
+                    Honesty
+                        </span>
+                        <div class="progress rounded-0 " style="height:5px; width:50%; background-color: #8f5d47">
+                        <div class="progress-bar" style="height: 6px; background: #ca9981; width: 
+                    50%
+                        ;"></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="justify-content-between align-items-center">
+                        <span class="text-right" style="font-variant:small-caps; font-size: 18px; letter-spacing: 2px;">
+                    Charisma
+                        </span>
+                        <div class="progress rounded-0 " style="height:5px; width:50%; background-color: #8f5d47">
+                        <div class="progress-bar" style="height: 6px; background: #ca9981; width: 
+                    50%
+                        ;"></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="justify-content-between align-items-center">
+                        <span class="text-right" style="font-variant:small-caps; font-size: 18px; letter-spacing: 2px;">
+                    Patience
+                        </span>
+                        <div class="progress rounded-0 " style="height:5px; width:50%; background-color: #8f5d47">
+                        <div class="progress-bar" style="height: 6px; background: #ca9981; width: 
+                    50%
+                        ;"></div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="col-lg col-12">
+                    <div class="justify-content-between align-items-center">
+                        <span class="text-right" style="font-variant:small-caps; font-size: 18px; letter-spacing: 2px;">
+                    Integrity
+                        </span>
+                        <div class="progress rounded-0 " style="height:5px; width:50%; background-color: #8f5d47">
+                        <div class="progress-bar" style="height: 6px; background: #ca9981; width: 
+                    50%
+                        ;"></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="justify-content-between align-items-center">
+                        <span class="text-right" style="font-variant:small-caps; font-size: 18px; letter-spacing: 2px;">
+                    Maturity
+                        </span>
+                        <div class="progress rounded-0 " style="height:5px; width:50%; background-color: #8f5d47">
+                        <div class="progress-bar" style="height: 6px; background: #ca9981; width: 
+                    50%
+                        ;"></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="justify-content-between align-items-center">
+                        <span class="text-right" style="font-variant:small-caps; font-size: 18px; letter-spacing: 2px;">
+                    Courage
+                        </span>
+                        <div class="progress rounded-0 " style="height:5px; width:50%; background-color: #8f5d47">
+                        <div class="progress-bar" style="height: 6px; background: #ca9981; width: 
+                    50%
+                        ;"></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="justify-content-between align-items-center">
+                        <span class="text-right" style="font-variant:small-caps; font-size: 18px; letter-spacing: 2px;">
+                    Intellect
+                        </span>
+                        <div class="progress rounded-0 " style="height:5px; width:50%; background-color: #8f5d47">
+                        <div class="progress-bar" style="height: 6px; background: #ca9981; width: 
+                    50%
+                        ;"></div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>   
+            <!-- END PERSONALITY SLIDERS -->
+            
+            
+        </div>
+        </div>
+        <!-- END PERSONALITY -->
+        
+
+
+<!--==============================
+
+          CHARACTER IMAGE 
+         below personality
+          
+==================================-->       
+        <div class="card rounded-0 mt-2 mr-lg-2" style="height:148px; background-color:transparent">
+            <div class="card rounded-0 p-2" style="height: 100%; width:100%; background-color: transparent; z-index: 9; border: 2px solid #794830">
+                <div style="background-image:url(
+
+                
+        CHARACTER_IMAGE
+                
+
+                ); height:100%; width:100%; background-size: cover; background-position: center;"></div>
+            </div>
+        </div>
+        <!-- END IMAGE -->
+        
+        
+    </div>
+     
+    <div class="col-12 col-lg">
+        
+
+<!--====================
+
+            IMAGE
+      above (dis)likes
+          
+        this image is hidden on smaller screens, to
+        make it show remove "hidden-md-down"
+          
+========================-->  
+        <div class="card rounded-0 mt-2 mt-lg-3 hidden-md-down" style="height:50px; background-image:url(
+        
+        
+        IMAGE
+        
+        
+            ); background-size:cover; background-position: center;">
+            <div style="height:300px; width: 100%; background: rgba(121,72,48,0.30)"></div>
+        </div>
+        <!-- END IMAGE -->
+
+
+<!--============================
+
+        LIKES + DISLIKES
+          
+================================--> 
+        <div class="row no-gutters my-2" style="height:226px">
+                    
+            <div class="col-6 mr-2 p-3" style="background-color:#794830; border-radius: 10px 0 0 10px">
+                <p class="mt-n2 mb-2" style="font-size: 25px; font-variant: small-caps; letter-spacing: 3px; border-bottom: 1px solid #ede4d6;">
+                Likes
+                </p>
+                
+            <!-- LIKES -->
+                <ul class="ml-n3" style="overflow: auto; scrollbar-width: none; height: 140px">
+                    <li>This will scroll</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                    
+                    <!-- add more above this line -->
+                    
+                </ul>
+            </div>
+            <div class="col p-3" style="; background-color:#794830; border-radius: 0 10px 10px 0">
+                <p class="mt-n2 mb-2" style="font-size: 25px; font-variant: small-caps; letter-spacing: 3px; border-bottom: 1px solid #ede4d6;">
+                Dislikes
+                </p>
+                
+                
+            <!-- DISLIKES -->
+                <ul class="ml-n3" style="overflow: auto; scrollbar-width: none; height: 140px">
+                    <li>This will scroll</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                    
+                    <!-- add more above this line -->
+                    
+                </ul>
+            </div>
+            
+        </div>
+        <!-- END LIKES + DISLIKES -->
+        
+        
+        
+<!--====================
+
+           IMAGE
+      benath (dis)likes
+          
+========================-->  
+        <div class="card rounded-0 mt-2 mt-lg-3" style="height:50px; background-image:url(
+        
+        
+        IMAGE
+        
+        
+            ); background-size:cover; background-position: center;">
+            <div style="height:300px; width: 100%; background: rgba(121,72,48,0.30)"></div>
+        </div>
+        <!-- END IMAGE -->
+        
+        
+    </div>
+</div>
+<!-- end bottom half -->
+</div>
+
+
+
+
+<!-- CREDIT DO NOT REMOVE -->
+    <div class="justify-content-center mt-2" >
+        <div data-toggle="tooltip" title="Code by Jellorat">
+            <a href="https://toyhou.se/Jellorat" class="text-secondary p-1" style="border-radius:40px; ">
+            <    <i class="fas fa-mouse-field mx-n1"></i> >
+            </a>
+        </div>
+        
+        <div data-toggle="tooltip" title="Layout">
+            <a href="https://toyhou.se/~world/82691.coders-quarters/page/161994.layout-pack-1" class="text-secondary p-1" style="border-radius:40px; ">
+                <i class="far fa-table-layout"></i>
+            </a>
+        </div>
+    </div>
+<!-- CREDIT DO NOT REMOVE -->
+
+
+
+
+
+
+
+
+<!--=================================
+
+               END 
+      thanks for using my code!!
+      
+===================================-->
